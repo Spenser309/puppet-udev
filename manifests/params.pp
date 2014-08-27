@@ -12,7 +12,7 @@ class udev::params {
       $udevtrigger     = 'udevadm trigger'
     }
     'redhat': {
-      case $::operatingsystemmajrelease {
+      case $::lsbmajdistrelease {
         '5': {
           $udevtrigger     = 'udevtrigger'
           $udevlogpriority = 'udevcontrol log_priority'
